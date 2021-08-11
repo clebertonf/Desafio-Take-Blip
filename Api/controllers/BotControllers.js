@@ -1,9 +1,10 @@
 const moment = require('moment');
 const Api = require('../utils/requestAPI');
+const { notFound } = require('@hapi/boom');
 
 const getLanguagesAPI = async (_req, resp) => {
   const repositories = await Api();
-  if(repositories.message) return resp.status(404).json({ message: repositories.message });
+  if(repositories.message) throw notFound(repositories.message);
 
   const repositoriesCsharp = repositories
     .filter((repository) => repository.language === 'C#');
