@@ -2,26 +2,26 @@ const moment = require('moment');
 const Api = require('../utils/requestAPI');
 
 const getLanguagesAPI = async (_req, resp) => {
-  const reposTake = await Api();
+  const repositories = await Api();
 
-  const reposCharp = reposTake.filter((value) => value.language === 'C#');
+  const reposCharp = repositories.filter((value) => value.language === 'C#');
 
   const sortRepposTake = reposCharp
     .sort((a, b) => (a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0));
 
-  const verify = sortRepposTake.map(({
-    created_at, name, language, owner: { avatar_url }, description, ...othres
+  const orderedRepositories = sortRepposTake.map(({
+    created_at, name, language, owner: { avatar_url }, description, ...others
   }) => ({
-    a: moment(created_at).format('DD-MM-YYYY'),
-    b: name,
-    c: language,
-    d: avatar_url,
-    e: description,
+    date: moment(created_at).format('DD-MM-YYYY'),
+    name,
+    language,
+    avatar_url,
+    description,
   }));
 
-  const response = verify.slice(0, 5);
+  const FiveRepositories = orderedRepositories.slice(0, 5);
 
-  resp.status(200).json({ languages: response });
+  resp.status(200).json({ languages: FiveRepositories });
 };
 
 module.exports = { getLanguagesAPI };
