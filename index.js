@@ -6,4 +6,4 @@ const { PORT } = process.env;
 
 app.use(require('./Api/routers'))
 
-app.listen(3000, () => console.log(`Servidor Online ${ PORT }`));
+app.listen(PORT, () => console.log(`Servidor Online ${ PORT }`));
