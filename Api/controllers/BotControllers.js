@@ -10,17 +10,18 @@ const getLanguagesAPI = async (_req, resp) => {
     .sort((a, b) => (a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0));
 
   const verify = sortRepposTake.map(({
-    created_at, name, language, avatar_url, ...othres
+    created_at, name, language, owner: { avatar_url }, description, ...othres
   }) => ({
     a: moment(created_at).format('DD-MM-YYYY'),
     b: name,
     c: language,
     d: avatar_url,
+    e: description,
   }));
 
   const response = verify.slice(0, 5);
 
-  resp.status(200).json({ response });
+  resp.status(200).json({ languages: response });
 };
 
 module.exports = { getLanguagesAPI };
