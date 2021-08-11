@@ -10,10 +10,10 @@ const getLanguagesAPI = async (_req, resp) => {
     .sort((a, b) => (a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0));
 
   const orderedRepositories = sortRepposTake.map(({
-    created_at, name, language, owner: { avatar_url }, description, ...others
+    created_at, full_name, language, owner: { avatar_url }, description, ...others
   }) => ({
     date: moment(created_at).format('DD-MM-YYYY'),
-    name,
+    full_name,
     language,
     avatar_url,
     description,
