@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/clebertonf/desafio-take-blip/issues"
   },
-  "homepage": "https://github.com/clebertonf/desafio-take-blip#readme"
+  "homepage": "https://github.com/clebertonf/desafio-take-blip#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
