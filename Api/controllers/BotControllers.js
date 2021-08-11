@@ -3,6 +3,7 @@ const Api = require('../utils/requestAPI');
 
 const getLanguagesAPI = async (_req, resp) => {
   const repositories = await Api();
+  if(repositories.message) return resp.status(404).json({ message: repositories.message });
 
   const reposCharp = repositories.filter((value) => value.language === 'C#');
 
