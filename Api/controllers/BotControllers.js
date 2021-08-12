@@ -1,4 +1,3 @@
-const moment = require('moment');
 const Api = require('../utils/requestAPI');
 const { notFound } = require('@hapi/boom');
 const rescue = require('express-rescue');
@@ -10,31 +9,22 @@ const getLanguagesAPI = rescue(async (_req, resp) => {
     throw notFound('Algum erro aconteceu com a API!, tente novamente mais tarde.');
 
   const repositoriesCsharp = repositories
-    .filter((repository) => repository.language === 'C#');
- 
-  const sortrepositories = repositoriesCsharp
+    .filter((repository) => repository.language === 'C#')
     .sort((a, b) => (a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0));
 
-  const orderedRepositories = sortrepositories.map(({
-    created_at, full_name, language, owner: { avatar_url }, description, ...others
+  const orderedRepositories = repositoriesCsharp.map(({
+    full_name, description, owner: { avatar_url }, ..._others
   }) => ({
-    date: moment(created_at).format('DD-MM-YYYY'),
     full_name,
-    language,
-    avatar_url,
     description,
+    avatar_url,
   })).slice(0, 5);
 
-  const Object = {
-    repo1: orderedRepositories[0],
-    repo2: orderedRepositories[1],
-    repo3: orderedRepositories[2],
-    repo4: orderedRepositories[3],
-    repo5: orderedRepositories[4],
-    repo6: orderedRepositories[5]
-  }
+  const objectWithRepositories = Object.assign({}, orderedRepositories);
 
-  return resp.status(200).json(Object);
+
+  return resp.status(200).json(objectWithRepositories);
 });
 
-module.exports = { getLanguagesAPI };
+
+module.exports = { getLanguagesAPI }
