@@ -28,10 +28,10 @@ const getLanguagesAPI = rescue(async (_req, resp) => {
   const Object = {
     repo1: orderedRepositories[0],
     repo2: orderedRepositories[1],
-    repo2: orderedRepositories[2],
-    repo2: orderedRepositories[3],
-    repo2: orderedRepositories[4],
-    repo2: orderedRepositories[5]
+    repo3: orderedRepositories[2],
+    repo4: orderedRepositories[3],
+    repo5: orderedRepositories[4],
+    repo6: orderedRepositories[5]
   }
 
   return resp.status(200).json(Object);
