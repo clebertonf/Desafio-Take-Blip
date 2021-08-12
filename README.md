@@ -14,25 +14,27 @@ O desfio proposto faz parte do desafio técnico da take-blip. Vem comigo que est
 
 Procurei implementar uma arquitetura na API, mesmo sabendo que só possui uma rota, somente um endpoint.
 Sempre pensando em escalabilidade e organização.
-A aquitetura pensada foi a **`MSC`**, mas sem a camada de `Services` pois a mesma é normalmente utilizada 
-para regras de negócio e camada com banco de dados.
+A aquitetura pensada foi a **`MSC`**.
 
-![estrutura](./Api/public/imgs/0001-estrutura.png)
+![estrutura](./Api/public/imgs/001-estrutura.png)
 
 **`MSC`** - MODEL, SERVICES e CONTROLLERS
 
 - #### API
 
-1. Pasta Controllers se dedica apenas para receber requisições e aplicar a logica necessaria
-   para o resultado esperado.
+1. Pasta Controllers se dedica apenas para receber requisições e repassar para camada de 
+   services, receber sua resposta e repassar para rota da aplicação.
 
 2. Pasta de middlewares ficam os middlewares, neste projeto possui um middleware de erro.
 
 3. Pasta routers contém as rotas da aplicação.
 
-4. Pasta public contém as imagens utilizadas no projeto.
+4. Pasta services se dedica a receber requisiçoes da camada de controllers, aplicar regras
+   de negócio e a logica necessária e devolver uma resposta ao services.
 
-5. Pasta ultils contém pequenas funções, neste projeto possui a requisição para API do github.
+5. Pasta public contém as imagens utilizadas no projeto.
+
+6. Pasta ultils contém pequenas funções, neste projeto possui a requisição para API do github.
 
 - #### Flow
 
@@ -95,12 +97,12 @@ Verifique o `package.json`, lá se encontram scripts para execução do projeto.
 
    Este endpoint lista os 5 primeiros repositórios mais antigos da take blip na linguagem c#.
 
-   ![arquivo .env](./Api/public/imgs/0003-get-languages.png)
+   ![retorno 200 ok](./Api/public/imgs/0003-get-languages.png)
 
 - Validação de erros:
   
-   Caso Endpoint não exista, o seguinte erro e retornado:
+   Caso Endpoint não exista, ou algum erro aconteça com API o seguinte erro e retornado:
 
-   ![arquivo .env](./Api/public/imgs/0004-error.png)
+   ![retorno 404 error](./Api/public/imgs/004-error.png)
 
 ### Vou ficando por aqui, caso queira me contactar será um prazer! até breve!
