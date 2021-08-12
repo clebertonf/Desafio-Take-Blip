@@ -32,3 +32,46 @@ para regras de negócio e camanda com banco de dados.
 
 1. Pasta flow possui todo fluxo do bot desenvolvido na plataforma da [Take Blip](https://digital.take.net/conversas-inteligentes/?utm_source=Google&utm_medium=cpc&utm_term=take%20blip&utm_campaign=SEMB_Take-Blip-geral%20%28b-p-e%29&hsa_acc=2783574544&hsa_kw=take%20blip&hsa_ve=3&hsa_ad=511086110762&hsa_net=adwords&hsa_mt=e&hsa_cam=12320816312&hsa_src=g&hsa_tgt=aud-1180190166859:kwd-809239209550&hsa_grp=117951638579&utm_id=go_cmp-12320816312_adg-117951638579_ad-511086110762_aud-1180190166859:kwd-809239209550_dev-c_ext-_prd-_mca-_sig-CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE&gclid=CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE)
 
+## tecnologias utilizadas
+
+- Linguagens:
+    - NodeJs
+- Configurações / variáveis de ambiente
+    - Dotenv
+- Organização e Padronização de codigo:
+    - Eslint / config-airbnb-base
+- Facilitador de desenvolvimento:
+    - nodemon
+- framework's:
+    - Express
+- Status code das requisições:
+    - @hapi/boom
+- Manipulação de erros:
+    - express-rescue
+- Conversão de data / hora
+    - moment
+- Requisição API:
+    - node-fetch
+
+## Começando
+
+#### Para executar o projeto, será necessário ter instalado:
+
+1. [Insomnia](https://insomnia.rest/download) para fazer requisições nas rotas da API. (ou qualquer outro para testes de API)
+2. [NodeJS](https://nodejs.org/en/) Este projeto necessita do NodeJs instalado em seu computador para rodar localmente.
+
+#### proximos passos
+
+- Clone o repositório `  git clone git@github.com:clebertonf/Desafio-Take-Blip.git`
+- Na raiz do projeto rode o comando **npm install** para instalar as depedências do projeto.
+
+## Configuracão
+
+Crie um arquivo com nome **`.env`** na raiz do projeto, dentro deste arquivo adicione a seguinte 
+variável de ambiente:
+
+1. **`PORT=3000`**  *Aqui insira a porta que API irá funcionar (Padrão 3000)*
+
+![arquivo .env](./Api/public/imgs/0002-env.png)
+
+------
