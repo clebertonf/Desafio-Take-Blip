@@ -25,7 +25,7 @@ const getLanguagesAPI = rescue(async (_req, resp) => {
     description,
   })).slice(0, 5);
 
-  return resp.status(200).json(orderedRepositories);
+  return resp.status(200).json({ 1: orderedRepositories[0], 2: orderedRepositories[1]});
 });
 
 module.exports = { getLanguagesAPI };
