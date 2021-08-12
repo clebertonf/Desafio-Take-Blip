@@ -4,16 +4,18 @@ const moment = require('moment');
 const rescue = require('express-rescue');
 
 const getLanguagesAPI = rescue(async (_req, resp) => {
-  const repositories = await Api();
+  const takeBlip = 'takenet'
+  const quantity = 150;
+  const repositories = await Api(takeBlip, quantity);
 
   if(repositories.message) 
     throw notFound('Algum erro aconteceu com a API!, tente novamente mais tarde.');
 
-  const repositoriesCsharp = repositories
+  const repositoriesCsharpOrdered = repositories
     .filter((repository) => repository.language === 'C#')
      .sort((a, b) => (a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0));
 
-  const orderedRepositories = repositoriesCsharp.map(({
+  const orderedRepositories = repositoriesCsharpOrdered.map(({
     full_name, description, owner: { avatar_url }, created_at, ..._others
   }) => ({
     full_name,
@@ -26,6 +28,5 @@ const getLanguagesAPI = rescue(async (_req, resp) => {
 
   return resp.status(200).json(objectWithRepositories);
 });
-
 
 module.exports = { getLanguagesAPI }

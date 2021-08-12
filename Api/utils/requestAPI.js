@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
-const requestAPI =  async() => {
-    return await fetch('https://api.github.com/users/takenet/repos?per_page=200')
+const requestAPI =  async(userName, quantityOfRepos) => {
+    return await fetch(`https://api.github.com/users/${userName}/repos?per_page=${quantityOfRepos}`)
     .then((data) => data.json()).then((data) => data)
     .catch((err) => {
         console.error(err);
