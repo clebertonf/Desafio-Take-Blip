@@ -7,6 +7,10 @@ Este projeto consiste em uma API no padrão rest que faz uma requisição para A
 os repositórios de um usuário ou organização filtrando por linguagens.
 O desfio proposto faz parte do desafio técnico da take-blip. Vem comigo que este projeto ficou da hora :alarm_clock:
 
+### Esta API e consumida em um BOT na plataforma da Take Blip, todo um Fluxo foi criado para utilização
+### destes dados na API.
+### O fluxo do BOT esta em um arquivo .JSON na pasta Flow.
+
 ## Estrutura
 
 Procurei implementar uma arquitetura na API, mesmo sabendo que só possui uma rota, somente um endpoint.
