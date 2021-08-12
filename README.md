@@ -32,7 +32,7 @@ para regras de negócio e camanda com banco de dados.
 
 1. Pasta flow possui todo fluxo do bot desenvolvido na plataforma da [Take Blip](https://digital.take.net/conversas-inteligentes/?utm_source=Google&utm_medium=cpc&utm_term=take%20blip&utm_campaign=SEMB_Take-Blip-geral%20%28b-p-e%29&hsa_acc=2783574544&hsa_kw=take%20blip&hsa_ve=3&hsa_ad=511086110762&hsa_net=adwords&hsa_mt=e&hsa_cam=12320816312&hsa_src=g&hsa_tgt=aud-1180190166859:kwd-809239209550&hsa_grp=117951638579&utm_id=go_cmp-12320816312_adg-117951638579_ad-511086110762_aud-1180190166859:kwd-809239209550_dev-c_ext-_prd-_mca-_sig-CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE&gclid=CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE)
 
-## tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Linguagens:
     - NodeJs
@@ -60,7 +60,7 @@ para regras de negócio e camanda com banco de dados.
 1. [Insomnia](https://insomnia.rest/download) para fazer requisições nas rotas da API. (ou qualquer outro para testes de API)
 2. [NodeJS](https://nodejs.org/en/) Este projeto necessita do NodeJs instalado em seu computador para rodar localmente.
 
-#### proximos passos
+#### Próximos passos
 
 - Clone o repositório `  git clone git@github.com:clebertonf/Desafio-Take-Blip.git`
 - Na raiz do projeto rode o comando **npm install** para instalar as depedências do projeto.
@@ -75,3 +75,18 @@ variável de ambiente:
 ![arquivo .env](./Api/public/imgs/0002-env.png)
 
 ------
+
+## Executando API
+
+Verifique o `package.json`, lá se encontram scripts para execução do projeto.
+
+- `"dev": "nodemon index.js",`  (`npm run debug`) inicia o projeto com nodemon.
+- `"start": "node index.js",` (`npm start`) inicia o projeto com  node.
+
+## Endpoint da API (lista repositórios na ordem crescente, pela linguagem C#)
+
+1. ####  `GET` localhost:3000/
+
+   Este endpoint lista os 5 primeiros repositórios mais antigos da take blip na linguagem c#.
+
+   ![arquivo .env](./Api/public/imgs/0003-get-languages.png)
