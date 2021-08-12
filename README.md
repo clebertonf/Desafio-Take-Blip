@@ -7,9 +7,8 @@ Este projeto consiste em uma API no padrão rest que faz uma requisição para A
 os repositórios de um usuário ou organização filtrando por linguagens.
 O desfio proposto faz parte do desafio técnico da take-blip. Vem comigo que este projeto ficou da hora :alarm_clock:
 
-### Esta API e consumida em um BOT na plataforma da Take Blip, todo um Fluxo foi criado para utilização
-### destes dados na API.
-### O fluxo do BOT esta em um arquivo .JSON na pasta Flow.
+### Esta API é consumida em um BOT na plataforma da Take Blip, todo um Fluxo foi criado para utilização destes dados na API.
+### O fluxo do BOT está em um arquivo .JSON na pasta Flow.
 
 ## Estrutura
 
@@ -103,3 +102,5 @@ Verifique o `package.json`, lá se encontram scripts para execução do projeto.
    Caso Endpoint não exista, o seguinte erro e retornado:
 
    ![arquivo .env](./Api/public/imgs/0004-error.png)
+
+### Vou ficando por aqui, caso queira me contactar será um prazer! até breve!
