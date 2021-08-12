@@ -90,3 +90,9 @@ Verifique o `package.json`, lá se encontram scripts para execução do projeto.
    Este endpoint lista os 5 primeiros repositórios mais antigos da take blip na linguagem c#.
 
    ![arquivo .env](./Api/public/imgs/0003-get-languages.png)
+
+- Validação de erros:
+  
+   Caso Endpoint não exista, o seguinte erro e retornado:
+
+   ![arquivo .env](./Api/public/imgs/0004-error.png)
