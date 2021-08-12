@@ -11,7 +11,7 @@ Sempre pensando em escalabilidade e organização.
 A aquitetura pensada foi a **`MSC`**, mas sem a camada de `Services` pois a mesma é normalmente utilizada 
 para regras de negócio e camanda com banco de dados.
 
-![estrutura](./public/imgs/estrutura-project.png)
+![estrutura](./Api/public/imgs/0001-estrutura.png)
 
 **`MSC`** - MODEL, SERVICES e CONTROLLERS
 
@@ -26,7 +26,7 @@ para regras de negócio e camanda com banco de dados.
 
 4. Pasta public contém as imagens utilizadas no projeto.
 
-5. Pasta ultils contém pequenas funçoẽs, neste projeto possui a requisição para API do github.
+5. Pasta ultils contém pequenas funções, neste projeto possui a requisição para API do github.
 
 - #### Flow
 
