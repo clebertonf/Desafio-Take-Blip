@@ -5,7 +5,7 @@ const rescue = require('express-rescue');
 
 const getLanguagesAPI = rescue(async (_req, resp) => {
   const repositories = await Api();
-  
+
   if(repositories.message) 
     throw notFound('Algum erro aconteceu com a API!, tente novamente mais tarde.');
 
@@ -25,7 +25,7 @@ const getLanguagesAPI = rescue(async (_req, resp) => {
     description,
   })).slice(0, 5);
 
-  return resp.status(200).json({ languages: orderedRepositories });
+  return resp.status(200).json(orderedRepositories);
 });
 
 module.exports = { getLanguagesAPI };
