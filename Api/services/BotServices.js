@@ -2,10 +2,9 @@ const Api = require('../utils/requestAPI');
 const { notFound } = require('@hapi/boom');
 const moment = require('moment');
 
-const getLanguagesAPI = async () => {
-  const takeBlip = 'takenet'
-  const quantity = 150;
-  const repositories = await Api(takeBlip, quantity);
+const getLanguagesAPI = async (user, quantity) => {
+  
+  const repositories = await Api(user, quantity);
 
   if(repositories.message) 
     throw notFound(`Algum erro aconteceu com a API!, tente novamente mais tarde. ERROR: ${repositories.message}`);
