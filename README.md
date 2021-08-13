@@ -98,6 +98,9 @@ Verifique o `package.json`, lá se encontram scripts para execução do projeto.
 
 - `"dev": "nodemon index.js",`  (`npm run debug`) inicia o projeto com nodemon.
 - `"start": "node index.js",` (`npm start`) inicia o projeto com  node.
+- `"test": "mocha ./Api/__tests__/**/*$NAME*.test.js --exit"` Executa os testes
+    rode no terminal `npm test NAME=BotServices`, caso tenha mais arquivos de teste
+    basta trocar o nome do arquivo no parâmetro NAME.
 
 ## Endpoint da API (lista repositórios na ordem crescente, pela linguagem C#)
 
