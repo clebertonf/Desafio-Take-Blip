@@ -1,7 +1,7 @@
 ## Olá seja bem-vindo(a) API Rest do desafio prático da [Take Blip](https://digital.take.net/conversas-inteligentes/?utm_source=Google&utm_medium=cpc&utm_term=take%20blip&utm_campaign=SEMB_Take-Blip-geral%20%28b-p-e%29&hsa_acc=2783574544&hsa_kw=take%20blip&hsa_ve=3&hsa_ad=511086110762&hsa_net=adwords&hsa_mt=e&hsa_cam=12320816312&hsa_src=g&hsa_tgt=aud-1180190166859:kwd-809239209550&hsa_grp=117951638579&utm_id=go_cmp-12320816312_adg-117951638579_ad-511086110762_aud-1180190166859:kwd-809239209550_dev-c_ext-_prd-_mca-_sig-CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE&gclid=CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE) :rocket:
 
 Antes de qualquer coisa, este projeto está hospedado [AQUI](https://take-languages.herokuapp.com/),
-o endpoint retorna os 5 respositórios mais aintigos da [Take Blip](https://digital.take.net/conversas-inteligentes/?utm_source=Google&utm_medium=cpc&utm_term=take%20blip&utm_campaign=SEMB_Take-Blip-geral%20%28b-p-e%29&hsa_acc=2783574544&hsa_kw=take%20blip&hsa_ve=3&hsa_ad=511086110762&hsa_net=adwords&hsa_mt=e&hsa_cam=12320816312&hsa_src=g&hsa_tgt=aud-1180190166859:kwd-809239209550&hsa_grp=117951638579&utm_id=go_cmp-12320816312_adg-117951638579_ad-511086110762_aud-1180190166859:kwd-809239209550_dev-c_ext-_prd-_mca-_sig-CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE&gclid=CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE) na linguagem C#.
+o endpoint retorna os 5 respositórios mais antigos da [Take Blip](https://digital.take.net/conversas-inteligentes/?utm_source=Google&utm_medium=cpc&utm_term=take%20blip&utm_campaign=SEMB_Take-Blip-geral%20%28b-p-e%29&hsa_acc=2783574544&hsa_kw=take%20blip&hsa_ve=3&hsa_ad=511086110762&hsa_net=adwords&hsa_mt=e&hsa_cam=12320816312&hsa_src=g&hsa_tgt=aud-1180190166859:kwd-809239209550&hsa_grp=117951638579&utm_id=go_cmp-12320816312_adg-117951638579_ad-511086110762_aud-1180190166859:kwd-809239209550_dev-c_ext-_prd-_mca-_sig-CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE&gclid=CjwKCAjwjdOIBhA_EiwAHz8xm2U8kiDYD_yfPk0TQOn6w0tNpnvY_F1ycQOeXjHhZR8TlRSttX_gxxoCTDYQAvD_BwE) na linguagem C#.
 
 Este projeto consiste em uma API no padrão rest que faz uma requisição para API do github listando 
 os repositórios de um usuário ou organização filtrando por linguagens.
@@ -13,7 +13,7 @@ O desfio proposto faz parte do desafio técnico da take-blip. Vem comigo que est
 ## Estrutura
 
 Procurei implementar uma arquitetura na API, mesmo sabendo que só possui uma rota, somente um endpoint.
-Sempre pensando em escalabilidade e organização.
+Estou sempre pensando em escalabilidade e organização.
 A aquitetura pensada foi a **`MSC`**.
 
 ![estrutura](./Api/public/imgs/001-estrutura.png)
@@ -30,13 +30,13 @@ A aquitetura pensada foi a **`MSC`**.
 3. Pasta routers contém as rotas da aplicação.
 
 4. Pasta services se dedica a receber requisiçoes da camada de controllers, aplicar regras
-   de negócio e a lógica necessária e devolver uma resposta ao services.
+   de negócio e a lógica necessária e devolver uma resposta ao controllers.
 
 5. Pasta public contém as imagens utilizadas no projeto.
 
 6. Pasta ultils contém pequenas funções, neste projeto possui a requisição para API do github.
 
-7. __tests__ Pasta responsável pelos testes da aplicação, somente a camada services tem os testes 
+7. _tests_ Pasta responsável pelos testes da aplicação, somente a camada services tem os testes 
   implementados.
 
 - #### Flow
@@ -98,8 +98,8 @@ Verifique o `package.json`, lá se encontram scripts para execução do projeto.
 
 - `"dev": "nodemon index.js",`  (`npm run debug`) inicia o projeto com nodemon.
 - `"start": "node index.js",` (`npm start`) inicia o projeto com  node.
-- `"test": "mocha ./Api/__tests__/**/*$NAME*.test.js --exit"` Executa os testes
-    rode no terminal `npm test NAME=BotServices`, caso tenha mais arquivos de teste
+- `"test": "mocha ./Api/__tests__/**/*$NAME*.test.js --exit"` Executa os testes.
+    Rode no terminal `npm test NAME=BotServices`, caso tenha mais arquivos de teste
     basta trocar o nome do arquivo no parâmetro NAME.
 
 ## Endpoint da API (lista repositórios na ordem crescente, pela linguagem C#)
